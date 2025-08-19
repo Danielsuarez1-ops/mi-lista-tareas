@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tareas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px gray;
+      width: 300px;
+      text-align: center;
+    }
+    input {
+      width: 70%;
+      padding: 5px;
+    }
+    button {
+      padding: 6px 10px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+    li {
+      list-style: none;
+      margin: 5px 0;
+      padding: 5px;
+      background: #e6e6e6;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+    }
+    li.completada {
+      text-decoration: line-through;
+      background: #b2f7b2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📋 Mi Lista de Tareas</h1>
+    <input type="text" id="tareaInput" placeholder="Escribe una tarea...">
+    <button onclick="agregarTarea()">Agregar</button>
+    <ul id="listaTareas"></ul>
+  </div>
+
+  <script>
+    function agregarTarea() {
+      let input = document.getElementById("tareaInput");
+      let texto = input.value.trim();
+
+      if (texto === "") {
+        alert("Escribe una tarea primero");
+        return;
+      }
+
+      let li = document.createElement("li");
+      li.textContent = texto;
+
+      // Marcar como completada al hacer clic
+      li.onclick = function () {
+        li.classList.toggle("completada");
+      };
+
+      // Botón para eliminar tarea
+      let botonEliminar = document.createElement("button");
+      botonEliminar.textContent = "❌";
+      botonEliminar.onclick = function (event) {
+        event.stopPropagation(); // evitar que marque como completada
+        li.remove();
+      };
+
+      li.appendChild(botonEliminar);
+      document.getElementById("listaTareas").appendChild(li);
+
+      input.value = ""; // limpiar el input
+    }
+  </script>
+</body>
+</html>
