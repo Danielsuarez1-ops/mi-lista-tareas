@@ -40,9 +40,10 @@ Puedes probar la aplicación aquí:
 ## 🔧 Paso 1: 🛡️ Configuración del Security Group
 Asegúrate de que tu Security Group tenga estas reglas:
 
-Tipo	Puerto	Origen	Descripción
-SSH	22	Tu IP o 0.0.0.0/0	Acceso SSH
-TCP Personalizado	8080	0.0.0.0/0	Servidor desarrollo
+
+SSH   	22	  Tu IP o 0.0.0.0/0	   Acceso SSH
+
+TCP Personalizado	  8080	   0.0.0.0/0	  Servidor desarrollo
 
 ---
 
