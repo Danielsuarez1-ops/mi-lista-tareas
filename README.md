@@ -89,6 +89,7 @@ TCP Personalizado	  8080	   0.0.0.0/0	  Servidor desarrollo
 
    8. cd ~/mi-lista-tareas && http-server -p 8080
 
+<img width="1050" height="524" alt="image" src="https://github.com/user-attachments/assets/f7ebe54c-0983-4426-a9ed-336c0fab317b" />
 
 
 ---
@@ -96,6 +97,9 @@ TCP Personalizado	  8080	   0.0.0.0/0	  Servidor desarrollo
 ## 🔧 Paso 7: Accerde a la Aplicacion
 
 Ir al navegador: http://3.139.90.170:8080
+
+<img width="1050" height="552" alt="image" src="https://github.com/user-attachments/assets/ca893c1a-d5e6-4e6c-833a-a0a25cf47e96" />
+
 
 
 ---
