@@ -12,6 +12,7 @@ Tiene tres funcionalidades principales:
 - ✅ Marcar tareas como completadas.
 - 🗑️ Eliminar tareas de la lista.
 
+---
 
 ## 🚀 Demo en línea
 
@@ -33,3 +34,11 @@ Puedes probar la aplicación aquí:
   - Instancia EC2 creada y corriendo
   - Security Group con puertos 22 (SSH) y 8080 (desarrollo)
   - Acceso SSH a la instancia
+
+---
+
+## 🔧 Paso 1: Conectarse a la Instancia EC2
+
+   1. Ve a ## AWS Console 	➟
+
+
