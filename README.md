@@ -39,6 +39,58 @@ Puedes probar la aplicación aquí:
 
 ## 🔧 Paso 1: Conectarse a la Instancia EC2
 
-   1. Ve a ## AWS Console 	➟
+   1. Ve a **AWS Console** 	➟ EC2 ➟ **Instancias**
+   2. Selecciona tu instancia
+   3. Clic en **"Connect"**
+   4. Selecciona **"EC2 Instance Connect"**
+   5. Click en **Connect**
 
 
+---
+
+## 🔧 Paso 2: Preparar el Entorno
+
+**Actualizar el sistema e instalar dependencias**
+
+   1. sudo apt update && sudo apt upgrade -y 
+   2. sudo apt update && sudo apt upgrade -y
+   sudo apt install -y nodejs npm
+   3. node -v
+   npm -v
+   4. sudo apt install -y git
+
+---
+
+## 🔧 Paso 3: Clonar el Repositorio
+
+   5. git clone https://github.com/danielsuarez1-ops/mi-lista-tareas.git
+   6. cd mi-lista-tareas
+
+
+---
+
+## 🔧 Paso 4: Instalar Dependencias
+
+   7. sudo npm install -g http-server
+
+
+---
+
+## 🔧 Paso 5: Ejecutar el Servidor del Desarrollo
+
+   8. cd ~/mi-lista-tareas
+   http-server -p 8080
+
+
+---
+
+## 🔧 Paso 6: Accerde a la Aplicacion
+
+Ir al navegador: http://3.139.90.170:8080
+
+
+---
+
+## 🔧 Paso 7: Detener el Servidor 
+
+Presiona **Ctrl + C**  en la terminal
