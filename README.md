@@ -53,8 +53,7 @@ Puedes probar la aplicación aquí:
 **Actualizar el sistema e instalar dependencias**
 
    1. sudo apt update && sudo apt upgrade -y 
-   2. sudo apt update && sudo apt upgrade -y
-   sudo apt install -y nodejs npm
+   2. sudo apt update && sudo apt upgrade -y && sudo apt install -y nodejs npm
    3. node -v
    npm -v
    4. sudo apt install -y git
