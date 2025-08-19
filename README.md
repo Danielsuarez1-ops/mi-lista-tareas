@@ -77,8 +77,8 @@ Puedes probar la aplicación aquí:
 
 ## 🔧 Paso 5: Ejecutar el Servidor del Desarrollo
 
-   8. cd ~/mi-lista-tareas
-   http-server -p 8080
+   8. cd ~/mi-lista-tareas && http-server -p 8080
+
 
 
 ---
