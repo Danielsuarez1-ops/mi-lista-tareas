@@ -14,6 +14,11 @@ Tiene tres funcionalidades principales:
 
 ---
 
+## URL de la aplicación desplegada
+👉 [http://3.139.90.170:8080](http://3.139.90.170:8080)
+
+---
+
 ## 🚀 Demo en línea
 
 Puedes probar la aplicación aquí:  
@@ -26,14 +31,17 @@ Puedes probar la aplicación aquí:
 - **HTML5** → estructura de la página.  
 - **CSS3** → estilos y diseño responsivo.  
 - **JavaScript (Vanilla JS)** → lógica de la aplicación.
+- **AWS EC2** (Ubuntu 24.04 LTS)
 
 ---
 
 ## Requicitos previos
 
-  - Instancia EC2 creada y corriendo
-  - Security Group con puertos 22 (SSH) y 8080 (desarrollo)
-  - Acceso SSH a la instancia
+ - Cuenta en AWS (Free Tier).
+- Instancia EC2 con Ubuntu 24.04.
+- Configuración de clave SSH para conectarse.
+- Puertos abiertos en **Security Groups**: 22 (SSH) y 8080 (HTTP para la app).
+- Git y Node.js instalados en la instancia.
 
 ---
 
@@ -107,3 +115,25 @@ Ir al navegador: http://3.139.90.170:8080
 ## 🔧 Paso 8: Detener el Servidor 
 
 Presiona **Ctrl + C**  en la terminal
+
+---
+## Problemas encontrados y soluciones
+
+❌ ~sudo → daba error porque no existe el comando, lo corregí a sudo.
+
+❌ npm install fallaba → la app no tenía package.json, descubrí que no lo necesitaba al ser HTML estático.
+
+❌ cd ~/mi-lista-tareas http-server -p 8080 → error de “too many arguments”, lo solucioné ejecutando comandos en líneas separadas.
+
+
+---
+
+## Consejos y mejores prácticas
+
+- Siempre separar comandos con && o en líneas distintas.
+
+- Usar http-server para proyectos estáticos.
+
+- No exponer más puertos de los necesarios en AWS.
+
+- Verificar con node -v y npm -v que las herramientas se instalen correctamente.
