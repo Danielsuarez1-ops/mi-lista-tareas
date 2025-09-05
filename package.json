@@ -1,0 +1,15 @@
+{
+  "name": "mi-lista-tareas",
+  "version": "1.0.0",
+  "description": "Pruebas para CI de mi lista de tareas",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "jest-environment-jsdom": "^29.0.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}
