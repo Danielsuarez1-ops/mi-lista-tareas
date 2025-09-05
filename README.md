@@ -146,7 +146,21 @@ Presiona **Ctrl + C**  en la terminal
 ---
 ## ✅ Integración Continua (CI con GitHub Actions)
 
+## ✅ ¿Qué se automatiza?
+
+Tests automáticos: Se ejecutan cada vez que haces push
+Checks: Valida configuración del proyecto
+Verificación de migraciones: Asegura que no falten migraciones
+
+## ✅ 🔄 ¿Cuándo se ejecuta?
+
+Cada push a la rama main
+Cada Pull Request
+Manualmente desde GitHub
+
 Para que aparezca la etiqueta passing configuré GitHub Actions:
+
+---
 
 ## 1) Creación del Workflow
 
@@ -178,6 +192,8 @@ jobs:
       - name: Run tests
         run: npm test
 
+---
+
 ## 2) Creación de pruebas con Jest
 
 Agregué un archivo en tests/basic.test.js:
@@ -201,6 +217,8 @@ En package.json añadí el script de test:
   "test": "jest"
 }
 
+---
+
 
 ## 3) Resultado
 
@@ -208,10 +226,12 @@ Cuando hago un commit a main, GitHub Actions ejecuta los tests.
 
 Si todo pasa, el badge PASSING aparece en el README, cuando yo hacia algun comando mal aparecia FALLING.
 
+Los test se pueden verificar en **"Actions"**.
+
 
 ---
 
-## 3) ⚠️ Problemas encontrados y soluciones
+##  ⚠️ Problemas encontrados y soluciones
 
 ❌ GitHub Actions no corría tests → agregué un archivo basic.test.js mínimo para validar la app.
 
