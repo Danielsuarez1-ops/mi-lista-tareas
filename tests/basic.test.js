@@ -5,7 +5,7 @@ describe('Basic project checks', () => {
   });
 
   test('index.html exists', () => {
-    const fs = require('fs');
+    const fs = require;
     expect(fs.existsSync('index.html')).toBe(true);
   });
 });
