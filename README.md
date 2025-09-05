@@ -1,6 +1,6 @@
 [![AWS EC2](https://img.shields.io/badge/AWS-EC2-orange?logo=amazon-aws&logoColor=white)](http://18.225.9.200:8080)
 [![CI](https://github.com/Danielsuarez1-ops/mi-lista-tareas/actions/workflows/ci.yml/badge.svg)](https://github.com/Danielsuarez1-ops/mi-lista-tareas/actions/workflows/ci.yml)
-![Ready](https://img.shields.io/badge/Ready-brightgreen)
+
 
 
 # 📌 Guia de Desarrollo Mi Lista de Tareas   EC2
