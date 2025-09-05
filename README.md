@@ -148,15 +148,16 @@ Presiona **Ctrl + C**  en la terminal
 
 ## 🔄¿Qué se automatiza?
 
--Tests automáticos: Se ejecutan cada vez que haces push
--Checks: Valida configuración del proyecto
--Verificación de migraciones: Asegura que no falten migraciones
+- ➕ Tests automáticos: Se ejecutan cada vez que se hace push
+- ➕ Checks: Valida configuración del proyecto
+- ➕ Verificación de migraciones: Asegura que no falten migraciones
 
 ## 🔄 ¿Cuándo se ejecuta?
 
--Cada push a la rama main
--Cada Pull Request
--Manualmente desde GitHub
+
+- Cada push a la rama main
+- Cada Pull Request
+- Manualmente desde GitHub
 
 Para que aparezca la etiqueta passing configuré GitHub Actions:
 
