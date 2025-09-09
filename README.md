@@ -246,16 +246,6 @@ Create a new branch for this commit and start a pull request, luego hice un Pull
 ✅ Finalmente logré que el workflow se ejecute y aparezca el badge passing.
 
 
-
----
-
-# 📦 Dockerización de la aplicación
-
-Para desplegar esta aplicación en contenedores, se utilizó **Docker** con **nginx** como servidor web. Esto permitió empaquetar el proyecto en una imagen ligera y replicable en cualquier entorno.
-
----
-
-## 🛠️ Dockerfile
 ---
 
 # 📦 Dockerización de la aplicación
@@ -306,8 +296,6 @@ sudo docker build -t mi-lista-tareas:1.0 .
 2. Ejecutar el contenedor
 sudo docker run --name mi-lista-tareas -p 8080:80 -d mi-lista-tareas:1.0
 
-
---name mi-lista-tareas → nombre del contenedor.
 
 -p 8080:80 → expone el puerto 8080 del servidor hacia el 80 del contenedor.
 
