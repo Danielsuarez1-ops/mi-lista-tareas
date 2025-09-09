@@ -244,3 +244,63 @@ Create a new branch for this commit and start a pull request, luego hice un Pull
 ❌ Error “No tests found” en GitHub Actions, Jest no detectaba ningún archivo de pruebas. Solución: guardé mis pruebas en la carpeta tests/ y con el sufijo .test.js (por ejemplo: basic.test.js).
 
 ✅ Finalmente logré que el workflow se ejecute y aparezca el badge passing.
+
+
+
+---
+
+# 📦 Dockerización de la aplicación
+
+Para desplegar esta aplicación en contenedores, se utilizó **Docker** con **nginx** como servidor web. Esto permitió empaquetar el proyecto en una imagen ligera y replicable en cualquier entorno.
+
+---
+
+## 🛠️ Dockerfile
+
+El archivo `Dockerfile` se creó en la raíz del proyecto con el siguiente contenido:
+
+```dockerfile
+# Usar una imagen base ligera de nginx
+FROM nginx:alpine
+
+# Borrar contenido default de nginx
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copiar los archivos de la app
+COPY . /usr/share/nginx/html
+
+# Exponer el puerto 80
+EXPOSE 80
+
+# Comando por defecto de nginx
+CMD ["nginx", "-g", "daemon off;"]
+
+---
+
+## 2) Creación de pruebas con Jest
+
+## 🚫 .dockerignore
+
+Se creó un archivo .dockerignore para evitar copiar archivos innecesarios a la imagen:
+
+README.md
+Dockerfile
+.dockerignore
+.git
+.github
+
+🚀 Construcción y ejecución con Docker
+1. Construir la imagen
+sudo docker build -t mi-lista-tareas:1.0 .
+
+2. Ejecutar el contenedor
+sudo docker run --name mi-lista-tareas -p 8080:80 -d mi-lista-tareas:1.0
+
+
+--name mi-lista-tareas → nombre del contenedor.
+
+-p 8080:80 → expone el puerto 8080 del servidor hacia el 80 del contenedor.
+
+-d → lo corre en segundo plano.
+
+La aplicación quedó disponible en:
