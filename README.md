@@ -256,28 +256,35 @@ Para desplegar esta aplicación en contenedores, se utilizó **Docker** con **ng
 ---
 
 ## 🛠️ Dockerfile
+---
 
-El archivo `Dockerfile` se creó en la raíz del proyecto con el siguiente contenido:
+# 📦 Dockerización de la aplicación
 
-```dockerfile
-# Usar una imagen base ligera de nginx
-FROM nginx:alpine
-
-# Borrar contenido default de nginx
-RUN rm -rf /usr/share/nginx/html/*
-
-# Copiar los archivos de la app
-COPY . /usr/share/nginx/html
-
-# Exponer el puerto 80
-EXPOSE 80
-
-# Comando por defecto de nginx
-CMD ["nginx", "-g", "daemon off;"]
+Para desplegar esta aplicación en contenedores, se utilizó **Docker** con **nginx** como servidor web.  
+Esto permitió empaquetar el proyecto en una imagen ligera y replicable en cualquier entorno.
 
 ---
 
-## 2) Creación de pruebas con Jest
+## 🛠️ Dockerfile
+
+El archivo `Dockerfile` se creó en la raíz del proyecto con el siguiente contenido:
+
+ Usar una imagen base ligera de nginx
+FROM nginx:alpine
+
+ Borrar contenido default de nginx
+RUN rm -rf /usr/share/nginx/html/*
+
+ Copiar los archivos de la app
+COPY . /usr/share/nginx/html
+
+ Exponer el puerto 80
+EXPOSE 80
+
+ Comando por defecto de nginx
+CMD ["nginx", "-g", "daemon off;"]
+
+---
 
 ## 🚫 .dockerignore
 
@@ -289,7 +296,10 @@ Dockerfile
 .git
 .github
 
-🚀 Construcción y ejecución con Docker
+---
+
+## 🚀 Construcción y ejecución con Docker
+
 1. Construir la imagen
 sudo docker build -t mi-lista-tareas:1.0 .
 
@@ -303,4 +313,46 @@ sudo docker run --name mi-lista-tareas -p 8080:80 -d mi-lista-tareas:1.0
 
 -d → lo corre en segundo plano.
 
-La aplicación quedó disponible en:
+---
+
+## 🔧 Docker Compose
+
+Para simplificar el despliegue se creó un archivo docker-compose.yml:
+
+version: "3.9"
+
+services:
+  mi-lista-tareas:
+    build: .
+    container_name: mi-lista-tareas
+    ports:
+      - "8080:80"
+    restart: always
+
+Comandos principales:
+
+Levantar el contenedor:
+
+sudo docker compose up -d
+
+
+Reiniciar (cuando se hacen cambios):
+
+sudo docker compose down && sudo docker compose up -d
+
+---
+
+## ⚠️ Problemas encontrados y soluciones
+
+
+❌ Docker no estaba instalado en la instancia EC2
+👉 Solución: se creó un script install-docker.sh que instala y habilita Docker en Ubuntu 24.04.
+
+❌ Error: no se encontraba el Dockerfile
+👉 Solución: crear el archivo en la carpeta correcta (~/mi-lista-tareas) usando nano Dockerfile.
+
+❌ docker: Error response from daemon: Conflict. The container name "/mi-lista-tareas" is already in use
+👉 Solución: detener y eliminar el contenedor viejo con:
+
+sudo docker stop mi-lista-tareas
+sudo docker rm mi-lista-tareas
