@@ -361,7 +361,8 @@ Gracias a Docker, mi aplicación ahora:
 
 Esto garantiza que la aplicación sea **portable, ligera y lista para producción**.
 
-<img width="1911" height="990" alt="image" src="https://github.com/user-attachments/assets/f3d2a1b0-6dea-4576-9dc8-6b64e966699d" />
+<img width="1917" height="1037" alt="image" src="https://github.com/user-attachments/assets/932e8e34-79a6-45b3-94cc-42f633838da3" />
+
 
 
 ---
