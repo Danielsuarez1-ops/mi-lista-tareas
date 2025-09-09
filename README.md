@@ -301,6 +301,8 @@ sudo docker run --name mi-lista-tareas -p 8080:80 -d mi-lista-tareas:1.0
 
 -d → lo corre en segundo plano.
 
+<img width="1862" height="570" alt="image" src="https://github.com/user-attachments/assets/d4b40c73-f337-4bf0-b83b-816a46109f7b" />
+
 ---
 
 ## 🔧 Docker Compose
@@ -328,6 +330,9 @@ Reiniciar (cuando se hacen cambios):
 
 sudo docker compose down && sudo docker compose up -d
 
+<img width="1857" height="265" alt="image" src="https://github.com/user-attachments/assets/8b7b6c88-69cc-43d2-920b-aca5e3a024c1" />
+
+
 ---
 
 ## ⚠️ Problemas encontrados y soluciones
@@ -344,3 +349,19 @@ sudo docker compose down && sudo docker compose up -d
 
 sudo docker stop mi-lista-tareas
 sudo docker rm mi-lista-tareas
+
+---
+
+## 🚀 Conclusión
+
+Gracias a Docker, mi aplicación ahora:
+- Se despliega de forma rápida y replicable en cualquier servidor.
+- No depende de configuraciones locales, todo está dentro del contenedor.
+- Puede escalar fácilmente usando Docker Compose o Kubernetes en el futuro.
+
+Esto garantiza que la aplicación sea **portable, ligera y lista para producción**.
+
+<img width="1911" height="990" alt="image" src="https://github.com/user-attachments/assets/f3d2a1b0-6dea-4576-9dc8-6b64e966699d" />
+
+
+---
