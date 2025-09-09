@@ -6,7 +6,8 @@
 
 
 
-# 📌 Guia de Desarrollo Mi Lista de Tareas   EC2
+# 📌 Guia de Desarrollo Mi Lista de Tareas   EC2 [![AWS EC2](https://img.shields.io/badge/AWS-EC2-orange?logo=amazon-aws&logoColor=white)](http://18.225.9.200:8080)
+
 
 Este proyecto es una aplicación web sencilla tipo **To-Do List**, desarrollada con **HTML, CSS y JavaScript**.  
 Tiene tres funcionalidades principales:
