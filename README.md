@@ -147,7 +147,8 @@ Presiona **Ctrl + C**  en la terminal
 
 
 ---
-## ✅ Integración Continua (CI con GitHub Actions)
+## ✅ Integración Continua (CI con GitHub Actions) [![CI](https://github.com/Danielsuarez1-ops/mi-lista-tareas/actions/workflows/ci.yml/badge.svg)](https://github.com/Danielsuarez1-ops/mi-lista-tareas/actions/workflows/ci.yml)
+
 
 ## 🔄¿Qué se automatiza?
 
@@ -249,7 +250,8 @@ Create a new branch for this commit and start a pull request, luego hice un Pull
 
 ---
 
-# 📦 Dockerización de la aplicación
+# 📦 Dockerización de la aplicación [![Docker Ready](https://img.shields.io/badge/Docker-Ready-blue?logo=docker&logoColor=white)](https://www.docker.com/)
+
 
 Para desplegar esta aplicación en contenedores, se utilizó **Docker** con **nginx** como servidor web.  
 Esto permitió empaquetar el proyecto en una imagen ligera y replicable en cualquier entorno.
