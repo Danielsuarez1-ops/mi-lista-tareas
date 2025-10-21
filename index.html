@@ -3,86 +3,173 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de Tareas</title>
+  <title>Mi Lista de Tareas</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(120deg, #74ebd5, #ace5d2);
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      margin: 0;
     }
+
     .container {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px gray;
-      width: 300px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      padding: 30px 25px;
+      width: 360px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+    }
+
+    h1 {
       text-align: center;
+      color: #2f2f2f;
+      margin-bottom: 20px;
+      font-size: 1.6em;
     }
+
+    .input-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
     input {
-      width: 70%;
-      padding: 5px;
+      flex: 1;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 0.95em;
+      outline: none;
+      transition: all 0.2s ease;
     }
+
+    input:focus {
+      border-color: #6a5acd;
+      box-shadow: 0 0 5px rgba(106, 90, 205, 0.3);
+    }
+
     button {
-      padding: 6px 10px;
-      margin-left: 5px;
+      padding: 10px 15px;
+      background-color: #5acd64;
+      color: white;
+      border: none;
+      border-radius: 10px;
       cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
     }
-    li {
+
+    button:hover {
+      background-color: #5a4abf;
+      transform: scale(1.05);
+    }
+
+    ul {
       list-style: none;
-      margin: 5px 0;
-      padding: 5px;
-      background: #e6e6e6;
-      border-radius: 5px;
+      padding: 0;
+      margin: 0;
+      max-height: 250px;
+      overflow-y: auto;
+    }
+
+    li {
+      background-color: #f7f8fa;
+      border-radius: 10px;
+      padding: 12px 15px;
+      margin-bottom: 10px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      font-size: 0.95em;
+      color: #333;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      transition: background 0.3s ease;
     }
+
+    li:hover {
+      background-color: #edf0ff;
+    }
+
     li.completada {
       text-decoration: line-through;
-      background: #b2f7b2;
+      color: #888;
+      background-color: #d9fdd3;
+    }
+
+    .delete-btn {
+      background: none;
+      border: none;
+      font-size: 18px;
+      color: #ff4d4d;
+      cursor: pointer;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .delete-btn:hover {
+      color: #ff0000;
+      transform: rotate(90deg);
+    }
+
+    /* Scroll personalizado */
+    ul::-webkit-scrollbar {
+      width: 8px;
+    }
+    ul::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>📋 Mi Lista de Tareas</h1>
-    <input type="text" id="tareaInput" placeholder="Escribe una tarea...">
-    <button onclick="agregarTarea()">Agregar</button>
+    <h1>📝 Mi Lista de Tareas</h1>
+    <div class="input-area">
+      <input id="tareaInput" type="text" placeholder="Escribe una tarea...">
+      <button onclick="agregarTarea()">Agregar</button>
+    </div>
     <ul id="listaTareas"></ul>
   </div>
 
   <script>
     function agregarTarea() {
-      let input = document.getElementById("tareaInput");
-      let texto = input.value.trim();
+      const input = document.getElementById("tareaInput");
+      const texto = input.value.trim();
 
       if (texto === "") {
-        alert("Escribe una tarea primero");
+        alert("Por favor escribe una tarea antes de agregarla.");
         return;
       }
 
-      let li = document.createElement("li");
+      const li = document.createElement("li");
       li.textContent = texto;
 
-      // Marcar como completada al hacer clic
-      li.onclick = function () {
-        li.classList.toggle("completada");
-      };
+      // Marcar como completada
+      li.onclick = () => li.classList.toggle("completada");
 
-      // Botón para eliminar tarea
-      let botonEliminar = document.createElement("button");
-      botonEliminar.textContent = "❌";
-      botonEliminar.onclick = function (event) {
-        event.stopPropagation(); // evitar que marque como completada
+      // Botón eliminar
+      const btnEliminar = document.createElement("button");
+      btnEliminar.className = "delete-btn";
+      btnEliminar.innerHTML = "🗑️";
+      btnEliminar.onclick = (e) => {
+        e.stopPropagation();
         li.remove();
       };
 
-      li.appendChild(botonEliminar);
+      li.appendChild(btnEliminar);
       document.getElementById("listaTareas").appendChild(li);
-
-      input.value = ""; // limpiar el input
+      input.value = "";
     }
   </script>
 </body>

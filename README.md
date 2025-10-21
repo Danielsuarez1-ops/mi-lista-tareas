@@ -8,6 +8,11 @@
 
 # 📌 Guia de Desarrollo Mi Lista de Tareas   EC2 [![AWS EC2](https://img.shields.io/badge/AWS-EC2-orange?logo=amazon-aws&logoColor=white)](http://18.225.9.200:8080)
 
+# 👥 Equipo de desarrollo
+
+
+
+# 💡 Descripción aplicativo
 
 Este proyecto es una aplicación web sencilla tipo **To-Do List**, desarrollada con **HTML, CSS y JavaScript**.  
 Tiene tres funcionalidades principales:
@@ -366,6 +371,37 @@ Esto garantiza que la aplicación sea **portable, ligera y lista para producció
 
 <img width="1917" height="1037" alt="image" src="https://github.com/user-attachments/assets/932e8e34-79a6-45b3-94cc-42f633838da3" />
 
+# Metodologia Kanban
 
+Se realiza seguimiento y asignacion de tareas utilizando la metodologia Kanban, en esta se encuentran cuatro columnas 
+📋 Backlog → 🚀 Ready → 👥 In Progress → 🔍 Review → ✅ Done
 
+Donde:
+-	Backlog (Pendientes o ideas)
+Aquí se almacenan todas las tareas que aún no se han empezado.
+
+-	Ready (Preparadas para iniciar)
+Son las tareas que ya están listas para comenzar porque tienen toda la información necesaria.
+-	In Progress (En progreso)
+Aquí se colocan las tareas que ya se están trabajando actualmente.
+-	Review (En revisión o prueba)
+La tarea está terminada, pero necesita revisión o validación.
+
+![alt text](/Imagenes/image.png)
+
+# Historias de usuarios
+
+Se elaboran historias de usuario que incluyen los criterios mínimos de aceptación, la categoría correspondiente y su tipo de estimación, con el fin de definir claramente el alcance y el esfuerzo requerido para su desarrollo.
+
+![alt text](/Imagenes/image2.png)
+
+La estructura utilizada para la redacción de cada historia es la siguiente:
+
+- Como: [persona o rol] que realiza la acción.
+
+- Quiero: [acción o funcionalidad] que el usuario desea ejecutar.
+
+- Para: [objetivo o beneficio] que se busca alcanzar con dicha acción.
+
+![alt text](/Imagenes/image3.png)
 ---
