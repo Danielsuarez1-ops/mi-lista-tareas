@@ -118,10 +118,7 @@ TCP Personalizado	  8080	   0.0.0.0/0	  Servidor desarrollo
 
 Ir al navegador: http://3.139.90.170:8080
 
-<img width="1050" height="552" alt="image" src="https://github.com/user-attachments/assets/ca893c1a-d5e6-4e6c-833a-a0a25cf47e96" />
-
-
-
+![alt text](/Imagenes/image-1.png)
 ---
 
 ## 🔧 Paso 8: Detener el Servidor 
@@ -369,7 +366,7 @@ Gracias a Docker, mi aplicación ahora:
 
 Esto garantiza que la aplicación sea **portable, ligera y lista para producción**.
 
-<img width="1917" height="1037" alt="image" src="https://github.com/user-attachments/assets/932e8e34-79a6-45b3-94cc-42f633838da3" />
+![alt text](/Imagenes/image-1.png)
 
 # Metodologia Kanban
 
